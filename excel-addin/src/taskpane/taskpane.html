@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenAI API Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Office UI Fabric, visit https://developer.microsoft.com/fabric. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="60" height="60" src="../../assets/openai-symbol-hexagon-dimensional-white.png" alt="OpenAI" title="OpenAI" />
+        <h1 style="margin: 0px 10px;" class="ms-font-xxl">Tabulate</h1>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+      <!-- <div class="topic-form-element"> -->
+      <!--   Automatically generate tables using OpenAI. -->
+      <!-- </div> -->
+      <div id="topic-form" class="ms-Grid topic-form-element" dir="ltr">
+        <div class="ms-Grid-row topic-box-container">
+          <div style="padding: 0px 0px" class="ms-Grid-col ms-sm2">
+            <label for="topic-box">Topic:</label>
+          </div>
+          <div class="ms-Grid-col ms-sm9">
+            <input autocomplete="off" id="topic-box" type="text" />
+          </div>
+          <div class="ms-Grid-col ms-sm1">
+            <i class="ms-Icon ms-Icon--Refresh" id="generate-random-topic"></i>
+          </div>
+        </div>
+      </div>
+      <div class="side-info-form topic-form-element" id="side-info-label">
+        <label for="side-info-box">Additional information</label>
+        <i class="ms-Icon ms-Icon--Add" title="Toggle" id="toggle-extra-info-hidden"></i>
+        <i style="display: none;" class="ms-Icon ms-Icon--CalculatorSubtract" title="Toggle" id="toggle-extra-info-visible"></i>
+      </div>
+      <div class="side-info-container-hidden topic-form-element" id="side-info-container">
+        <textarea autocomplete="off" rows="6" id="side-info-box"></textarea>
+      </div>
+      <div class="btn" id="suggest-header">Suggest Headers</div>
+      <div class="btn" id="complete-table">Complete Table</div>
+
+      <!-- <div class="row"> -->
+        <!--   <button class="ms-Button" id="test-stuff">Debug Function</button> -->
+        <!-- </div> -->
+      <div id="snackbar">...</div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+
+ ul {
+     margin: 0;
+     padding: 0;
+ }
+
+ .ms-welcome__header {
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+ }
+
+ .ms-welcome__main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    padding: 10px 10px;
+ }
+
+ .ms-welcome__main > h2 {
+     width: 100%;
+     text-align: center;
+ }
+
+ .ms-welcome__features {
+     list-style-type: none;
+     margin-top: 20px;
+ }
+
+ .ms-welcome__features.ms-List .ms-ListItem {
+     padding-bottom: 20px;
+     display: -webkit-flex;
+     display: flex;
+ }
+
+ .ms-welcome__features.ms-List .ms-ListItem > .ms-Icon {
+     margin-right: 10px;
+ }
+
+ .ms-welcome__action.ms-Button--hero {
+     margin-top: 30px;
+ }
+
+.ms-Button.ms-Button--hero .ms-Button-label {
+  color: #0078d7;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label{
+  color: #005a9e;
+  cursor: pointer;
+}
+
+b {
+    font-weight: bold;
+}
+
+
+/* from https://www.w3schools.com/howto/howto_js_snackbar.asp */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.btn {
+    padding: 10px 0px;
+    background-color: #F2F2F4;
+    cursor: pointer;
+    margin: 0px 0px 8px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #EBEBEE;
+}
+
+.side-info-form {
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.no-padding {
+    padding: 0px 0px;
+}
+
+.topic-box-container {
+    margin: 0px;
+}
+
+#topic-box {
+    width: 100%;
+    font-size: 12px;
+}
+
+.side-info-container-hidden {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.side-info-container-visible {
+    max-height: 100px;
+    transition: max-height 0.3s;
+}
+
+#side-info-box {
+    resize: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px;
+    font-size: 12px;
+}
+
+#topic-form {
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.topic-form-element {
+    text-align: left;
+    width: 100%;
+    margin: 0px 0px 8px 0px;
+}
