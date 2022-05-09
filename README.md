@@ -1,5 +1,7 @@
 # OpenAI API Excel integration
 
+(Update 2022-05-09: This code is no longer being maintained and there are no expectations that it will work.  For the most up to date documentation on our API, consider visiting https://beta.openai.com/examples or https://github.com/openai/openai-python)
+
 This repository contains an example OpenAI API integration for Excel. It allows users to query the API to automatically generate Excel tables about topics.
 
 For more details see the [API blog post](https://openai.com/blog/openai-api/)
